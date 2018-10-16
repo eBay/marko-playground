@@ -1,0 +1,19 @@
+<lasso-page
+    package-paths=input.packagePaths
+    dependencies=input.dependencies
+    name=input.name
+    flags=input.flags
+    cache-key=String(Math.random())/>
+
+<!doctype html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Marko Playground</title>
+        <lasso-head/>
+    </head>
+    <body.mpg>
+        <include(input.sidebar)/>
+        <include(input.body)/>
+    </body>
+</html>

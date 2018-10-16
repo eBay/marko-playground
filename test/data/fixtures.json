@@ -1,0 +1,8 @@
+{
+  "default": {
+    "name": "Frank"
+  },
+  "fixture2": {
+    "foo": "bar"
+  }
+}

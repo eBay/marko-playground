@@ -1,0 +1,14 @@
+$ const { componentNames, appName, appVersion } = input
+
+<a.mpg-home-link href="/" title="home">
+    <h1.mpg-h1>Marko Playground</h1>
+    <span>for ${appName} v${appVersion}</span>
+</a>
+
+<if(componentNames && componentNames.length)>
+    <ul.mpg-component-list>
+        <li.mpg-component-list-item for(componentName in componentNames)>
+            <a href="/${componentName}">${componentName}</a>
+        </li>
+    </ul>
+</if>

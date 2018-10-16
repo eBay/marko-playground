@@ -1,0 +1,32 @@
+<mpg-site-layout
+    packagePaths=input.packagePaths
+    dependencies=input.dependencies
+    name=input.componentName
+    flags=input.flags>
+
+    <@sidebar>
+        <section.mpg-sidebar>
+            <mpg-sidebar ...input />
+        </section>
+    </@sidebar>
+
+    <@body>
+        <section.mpg-main>
+            <div.mpg-component-use-case for(caseName, caseData in input.useCases)>
+                <h2>${caseName}</h2>
+                <div.widget-container>
+                    <div.widget.widget-1-col>
+                        <div.card>
+                            $ input.render(caseData, out)
+                        </div>
+
+                        <details>
+                            <summary>Fixture</summary>
+                            <pre>${JSON.stringify(caseData, null, 2)}</pre>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </@body>
+</mpg-site-layout>

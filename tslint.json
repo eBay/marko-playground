@@ -1,0 +1,24 @@
+{
+  "defaultSeverity": "error",
+  "extends": [ "tslint-config-airbnb", "tslint-eslint-rules" ],
+  "jsRules": { },
+  "rules": {
+    "max-line-length": [ true, 120 ],
+    "array-bracket-spacing": [ false ],
+    "trailing-comma": [ true, { "multiline": "never", "singleline": "never" } ],
+    "no-trailing-whitespace": [ true, "ignore-comments", "ignore-blank-lines" ],
+    //disabled until fixed: https://github.com/palantir/tslint/issues/3279
+    //"strict-boolean-expressions": [ true, "allow-undefined-union", "allow-string", "allow-number" ],
+    "no-console": [ true ],
+    "object-shorthand-properties-first": [ false ],
+    "ter-arrow-body-style": [ true, "as-needed" ],
+    "ter-arrow-parens": [ true, "as-needed" ],
+    "no-var-keyword": true,
+    "import-name": [ false ],
+    "no-unused-variable": true,
+    "no-unused-expression": true,
+    "no-use-before-declare": true,
+    "space-before-function-paren": false,
+    "align": [true, "statements", "members", "elements"]
+  }
+}

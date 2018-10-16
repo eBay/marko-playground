@@ -1,0 +1,8 @@
+--ui bdd
+--reporter spec
+--timeout 1000
+--inline-diffs
+--colors
+--recursive
+--require ts-node/register
+--require source-map-support/register

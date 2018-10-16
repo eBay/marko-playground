@@ -1,0 +1,84 @@
+/*
+ * Copyright 2018 eBay Inc.
+ *
+ * Use of this source code is governed by an MIT-style
+ * license that can be found in the LICENSE file or at
+ * https://opensource.org/licenses/MIT.
+ *
+ */
+
+.mpg {
+  padding: 20px;
+  background: #f0eeec;
+
+  .card {
+    margin: 1rem 0.5rem;
+    padding: 0.0625rem 0;
+    background-color: #fff;
+    border: 1px solid #cccccc;
+    border-radius: 2px;
+  }
+
+  .widget .card {
+    box-sizing: content-box;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 256px;
+  }
+
+  &-main {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 22em;
+    right: 1em;
+  }
+
+  &-component-use-case {
+    > h2 {
+      margin-top: 1em;
+      margin-bottom: 0.3em;
+      color: @mpg-color;
+      font-family: @mpg-font-family;
+      font-size: @mpg-font-size-h2;
+      font-weight: @mpg-font-weight-h2;
+
+      &:first-letter {
+        text-transform: capitalize;
+      }
+    }
+
+    > .widget-container {
+      > .widget {
+        > .card {
+          margin-bottom: 1em;
+        }
+
+        > details {
+          color: @mpg-color;
+          font-family: @mpg-font-family;
+          font-size: @mpg-font-size;
+
+          summary:hover {
+            cursor: pointer;
+          }
+          pre {
+            overflow: scroll;
+            max-height: 30em;
+          }
+        }
+      }
+
+      > .widget-1-col {
+        min-width: 450px;
+      }
+
+      > .widget-minimal > .card {
+        min-height: 0;
+      }
+    }
+  }
+
+}

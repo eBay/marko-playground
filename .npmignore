@@ -1,0 +1,20 @@
+### JetBrains template
+.idea/
+*.iws
+
+### Node template
+*.log
+
+# Dependency directories
+node_modules/
+
+# lasso/marko/ts
+static/
+.beans/
+.cache/
+*.map
+*.marko.js
+
+.nycrc
+.nyc_output/
+coverage/

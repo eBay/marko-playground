@@ -1,0 +1,25 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Node template
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Coverage directory used by tools like istanbul
+.nyc_output/
+coverage/
+
+node_modules
+
+### JetBrains template
+.idea/
+*.iml
+*.iws
+
+# lasso/marko/ts
+static/
+.beans/
+.cache/
+*.map
+*.marko.js
+dist/

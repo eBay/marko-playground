@@ -1,0 +1,77 @@
+{
+  "name": "marko-playground",
+  "version": "4.22.0",
+  "description": "Playground for visual testing of Marko components",
+  "main": "dist/index.js",
+  "scripts": {
+    "clean": "rimraf dist templates/*.marko.js test/**/*.marko.js static .cache",
+    "start": "yarn clean && COMPONENTS_ROOT_DIR=test/examples PLAYGROUND_DIR=test/pg yarn ts-node ./src/index.ts",
+    "compile": "tsc",
+    "lint": "tslint ./src/**/*.ts -p .",
+    "unit-test": "mocha 'test/**/*.spec.ts'",
+    "test": "yarn lint && yarn unit-test",
+    "release": "yarn npm_release --auto --auto-fallback minor",
+    "custom": "yarn clean && yarn compile && git fetch && yarn release",
+    "precommit": "yarn lint",
+    "prepush": "yarn test"
+  },
+  "keywords": [
+    "marko",
+    "marko-widgets",
+    "components",
+    "playground",
+    "typescript"
+  ],
+  "author": {
+    "name": "Timur Manyanov",
+    "email": "tmanyanov@ebay.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eBay/marko-playground.git"
+  },
+  "dependencies": {
+    "@lasso/marko-taglib": "^1.0.8",
+    "chalk": "^2.3.1",
+    "express": "^4.14.0",
+    "glob": "^7.1.0",
+    "lasso": "^3.1.0",
+    "lasso-less": "^2.4.7",
+    "lasso-marko": "^2.4.0",
+    "marko": "^4.7.4"
+  },
+  "devDependencies": {
+    "@types/async-writer": "^1.4.30",
+    "@types/chai": "^4.0.10",
+    "@types/express": "^4.0.39",
+    "@types/glob": "^5.0.34",
+    "@types/lasso": "^2.4.0",
+    "@types/lodash": "^4.14.88",
+    "@types/marko": "^4.6.0",
+    "@types/mocha": "^5.0.0",
+    "@types/node": "^8.0.58",
+    "@types/sinon": "^5.0.0",
+    "@types/sinon-chai": "^3.0.0",
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "husky": "^0.14.3",
+    "mocha": "^5.0.1",
+    "release-tools": "^2.5.2",
+    "rimraf": "^2.6.2",
+    "sinon": "^6.0.0",
+    "sinon-chai": "^3.0.0",
+    "source-map-support": "^0.5.6",
+    "ts-node": "^7",
+    "tslint": "^5.8.0",
+    "tslint-config-airbnb": "^5.5.0",
+    "typescript": "^2.7.2"
+  },
+  "bin": {
+    "marko-widgets-playground": "bin/marko-playground.js",
+    "marko-playground": "bin/marko-playground.js"
+  },
+  "engines": {
+    "node": ">=6.12.1"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "sourceMap": true,
+    "strictNullChecks": true,
+    "module": "commonjs",
+    "target": "es2016",
+    "allowJs": false,
+    "checkJs": false,
+    "strict": true,
+    "noImplicitAny": true,
+    "baseUrl": ".",
+    "lib": [ "dom", "es2017" ]
+  },
+  "include": [
+    "./"
+  ],
+  "exclude": [
+    "node_modules",
+    "static",
+    "test"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+    "port": 8080,
+    "componentsRootDir": "./src/components",
+    "playgroundDir": "test/playground",
+    "lassoConfig": {
+        "plugins": [
+            "lasso-less",
+            "lasso-marko"
+        ],
+        "outputDir": "static",
+        "bundlingEnabled": false,
+        "minify": false,
+        "fingerprintsEnabled": false
+    }
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "name": "comp-single-file-browser-json",
+    "dir": "./test/examples/comps/comp-single-file-browser-json",
+    "pgTemplate": "./templates/mpg-comp.marko.js"
+  },
+  {
+    "name": "comp-single-file",
+    "dir": "./test/examples/comps/comp-single-file",
+    "pgTemplate": "./templates/mpg-comp.marko.js"
+  },
+  {
+    "name": "comp-multi-file",
+    "dir": "./test/examples/comps/comp-multi-file",
+    "pgTemplate": "./templates/mpg-comp.marko.js"
+  },
+  {
+    "name": "comp-multi-file-custom",
+    "dir": "./test/examples/comps/comp-multi-file-custom",
+    "pgTemplate": "./test/examples/comps/comp-multi-file-custom/test/pg/index.marko.js"
+  },
+  {
+    "name": "comp-multi-file-browser-json",
+    "dir": "./test/examples/comps/comp-multi-file-browser-json",
+    "pgTemplate": "./templates/mpg-comp.marko.js"
+  },
+  {
+    "name": "comp-single-file-no-fixtures",
+    "dir": "./test/examples/comps/comp-single-file-no-fixtures",
+    "pgTemplate": "./templates/mpg-comp.marko.js"
+  }
+]

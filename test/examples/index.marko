@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>marko-express</title>
+  </head>
+  <body>
+    <h1>You have ${data.count} new messages!</h1>
+    <ul>
+        <li style="color: ${color}" for(color in data.colors)>${color}</li>
+    </ul>
+
+    $ {
+        //const includeTag = require('marko/src/taglibs/core/include-tag');
+        data.comp.render(data, out)
+        //includeTag(data, out);
+        //includeTag({ _target: data.comp }, out);
+    }
+
+  </body>
+</html>

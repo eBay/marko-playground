@@ -1,0 +1,8 @@
+{
+  "dependencies": [
+    "./styles/const.less",
+    "./styles/sidebar.less",
+    "./styles/comp.less",
+    "./styles/index.less"
+  ]
+}

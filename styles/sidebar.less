@@ -1,0 +1,58 @@
+/*
+ * Copyright 2018 eBay Inc.
+ *
+ * Use of this source code is governed by an MIT-style
+ * license that can be found in the LICENSE file or at
+ * https://opensource.org/licenses/MIT.
+ *
+ */
+
+.mpg-sidebar {
+  position: fixed;
+  overflow: scroll;
+  top: 0;
+  bottom: 0;
+  left: 1em;
+  width: 20em;
+  font-family: @mpg-font-family;
+  font-size: @mpg-font-size;
+}
+
+.mpg-component-list {
+  font-family: @mpg-font-family;
+  font-size: @mpg-font-size;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+
+  &-item {
+    padding: 0.5em 0;
+    font-size: @mpg-font-size;
+
+    a,
+    a:visited {
+      text-decoration: underline;
+      color: blue;
+    }
+  }
+}
+
+.mpg-home-link,
+.mpg-home-link:visited {
+  font-family: @mpg-font-family;
+  font-size: @mpg-font-size;
+  display: inline-block;
+  margin-bottom: 0.8em;
+  color: @mpg-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.mpg-h1 {
+  margin: 0.5em 0 0.3em;
+  font-size: @mpg-font-size-h1;
+  font-weight: @mpg-font-weight-h1;
+}

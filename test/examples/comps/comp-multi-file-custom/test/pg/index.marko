@@ -1,0 +1,34 @@
+<mpg-site-layout
+    packagePaths=input.packagePaths
+    dependencies=input.dependencies
+    name=input.componentName
+    flags=input.flags>
+
+    <@sidebar>
+        <section.mpg-sidebar>
+            <mpg-sidebar ...input />
+        </section>
+    </@sidebar>
+
+    <@body>
+        <section.mpg-main>
+            <div.mpg-component-use-case for(caseName, caseData in input.useCases)>
+                <h2>${caseName} - custom playground</h2>
+                <div.widget-container>
+                    <div.widget.widget-1-col>
+                        <div.card>
+                            <h3>This is a custom playground template</h3>
+                            <comp-multi-file-custom ...caseData />
+                            <button>Dummy button</button>
+                        </div>
+
+                        <details>
+                            <summary>Fixture</summary>
+                            <pre>${JSON.stringify(caseData, null, 2)}</pre>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </@body>
+</mpg-site-layout>
