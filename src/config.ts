@@ -10,7 +10,7 @@
 import { join } from 'path';
 const root = process.cwd();
 
-const pgConfigDir = process.env.CONFIG_DIR || `test/playground`;
+const pgConfigDir = process.env.CONFIG_DIR || 'test/playground';
 const localConfigRelPath = process.env.CONFIG || join(pgConfigDir, 'config');
 export const app = configWithOverrides(
   mergedConfig('./config/playground', localConfigRelPath),
@@ -55,7 +55,7 @@ export interface AppConfig {
 }
 
 export function configWithOverrides(config: AppConfig, env: any): AppConfig {
-  const playgroundConfigDir = env.CONFIG_DIR || `test/playground`;
+  const playgroundConfigDir = env.CONFIG_DIR || 'test/playground';
   const lassoLocalConfigDir = env.LASSO_CONFIG || join(playgroundConfigDir, 'lasso');
   const flags = (env.FLAGS || '').split(','); // todo: add to config
 

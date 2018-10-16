@@ -17,7 +17,7 @@ import { Dependencies } from './dependencies';
 import { reportVmFiles } from './logging';
 import { compListVm, pageVm, playgroundVm } from './view-model';
 import { Playground, withFixtures } from './playground';
-import { join } from 'path';
+import { resolve } from 'path';
 
 export interface RouteMatch {
   route: string;
@@ -72,7 +72,7 @@ function componentHandler(playground: Playground,
                           flags: string[]
 ): RequestHandler {
   const genericPlaygroundTemplate = '../templates/mpg-comp.marko';
-  const customTemplateRelPath = playground.customTemplate && join('..', playground.customTemplate);
+  const customTemplateRelPath = playground.customTemplate && resolve(playground.customTemplate);
   const template: Template = require(customTemplateRelPath || genericPlaygroundTemplate);
 
   const pgVm = playgroundVm(playground, componentNames, compDeps, flags);

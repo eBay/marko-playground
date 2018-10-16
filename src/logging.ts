@@ -26,9 +26,8 @@ console.debug = (...args: any[]): void => {
   }
 };
 
-export function reportServerStart(cfg: ServerConfig): void {
-  console.info(appColor(`Started Playground v${cfg.pgVersion} ` +
-    `for ${cfg.appName} v${cfg.appVersion} on ${cfg.url}\n`));
+export function reportServerStart({ pgVersion, appName, appVersion, url }: ServerConfig): void {
+  console.info(appColor(`Started Playground v${pgVersion} for ${appName} v${appVersion} on ${url}\n`));
 }
 
 function isSingleComponent(vm: SingleComponentPageVm | ComponentListPageVm): vm is SingleComponentPageVm {
@@ -47,15 +46,17 @@ export function reportVmFiles(vm: SingleComponentPageVm | ComponentListPageVm): 
 
 export function reportPlaygrounds(playgrounds: Playground[], componentsRootDir: string): void {
   if (!playgrounds.length) {
-    const docUrl = `https://github.com/eBay/marko-playground#components-discovery`;
+    const docUrl = 'https://github.com/eBay/marko-playground#components-discovery';
     console.info(`No components found in ${fileColor(componentsRootDir)}! Documentation: ${docUrl}`);
     return;
   }
 
-  console.info(`Components found:`);
+  console.info('Components found:');
 
   playgrounds.forEach(pg => {
-    console.info(`${compColor(pg.compName)} @ ${relative(appRoot, pg.compPath)}:`);
+    const compName = compColor(pg.compName);
+    
+    console.info(`${compName} @ ${relative(appRoot, pg.compPath)}:`);
 
     if (pg.compRenderer) {
       console.debug(`- using renderer ${fileColor(`./${relative(pg.compPath, pg.compRenderer)}`)}...`);
@@ -75,8 +76,8 @@ export function reportPlaygrounds(playgrounds: Playground[], componentsRootDir: 
     if (fixtureCount) {
       console.info(`- using ${fixtureCount} fixtures...`);
     } else {
-      console.error(`Error: no fixtures found for component ` +
-        `${compColor(pg.compName)} in ${fileColor('test/fixtures')}.`);
+      const fixtures = fileColor('test/fixtures');
+      console.error(`Error: no fixtures found for component ${compName} in ${fixtures}.`);
     }
   });
 }

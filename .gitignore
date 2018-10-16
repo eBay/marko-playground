@@ -23,3 +23,5 @@ static/
 *.map
 *.marko.js
 dist/
+
+yarn.lock

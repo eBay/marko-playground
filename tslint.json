@@ -15,7 +15,6 @@
     "ter-arrow-parens": [ true, "as-needed" ],
     "no-var-keyword": true,
     "import-name": [ false ],
-    "no-unused-variable": true,
     "no-unused-expression": true,
     "no-use-before-declare": true,
     "space-before-function-paren": false,
