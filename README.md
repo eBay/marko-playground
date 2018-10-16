@@ -1,3 +1,5 @@
+![build status](https://api.travis-ci.org/eBay/marko-playground.svg?branch=master)
+
 # marko-playground
 
 This project is a development utility for Marko UI components. On launch, it automatically detects all components in your Marko application and allows you to browse through them, rendering all declared use cases or states. 
@@ -135,7 +137,7 @@ npm test
 ```
 
 ## CI
-TBD
+https://travis-ci.org/eBay/marko-playground
 
 ## Licence
 
