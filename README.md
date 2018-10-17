@@ -26,10 +26,10 @@ yarn marko-playground
 npm run marko-playground
 ```
 
-## Declaring states
-When marko-playground detects a UI component, it reads its states from the directory `<component>/test/fixtures`. If no state (or fixture) has been found, it falls back to an empty state and renders the component accordingly.
+## Predefined component props (inputs)
+When marko-playground detects a UI component, it reads its props from the directory `<component>/test/fixtures`. If no prop (or fixture) has been found, it falls back to empty props and renders the component accordingly.
 
-Additional states can be defined with the following directory structure (which is also used by [marko-tester](https://github.com/oxala/marko-tester)):
+Additional props can be defined with the following directory structure (which is also used by [marko-tester](https://github.com/oxala/marko-tester)):
 
 ```json
 <component>/test/
