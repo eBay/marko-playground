@@ -1,4 +1,4 @@
-[![build status](https://api.travis-ci.org/eBay/marko-playground.svg?branch=master)](https://travis-ci.org/eBay/marko-playground)
+[![Build Status](https://api.travis-ci.org/eBay/marko-playground.svg?branch=master)](https://travis-ci.org/eBay/marko-playground)
 
 # marko-playground
 
