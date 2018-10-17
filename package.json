@@ -8,7 +8,7 @@
     "start": "yarn clean && COMPONENTS_ROOT_DIR=test/examples PLAYGROUND_DIR=test/pg yarn ts-node ./src/index.ts",
     "compile": "tsc",
     "lint": "tslint ./src/**/*.ts -p .",
-    "unit-test": "mocha 'test/**/*.spec.ts'",
+    "unit-test": "yarn markoc test && yarn mocha 'test/**/*.spec.ts'",
     "test": "yarn lint && yarn unit-test",
     "release": "yarn npm_release --auto --auto-fallback minor",
     "custom": "yarn clean && yarn compile && git fetch && yarn release",
