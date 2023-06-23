@@ -13,9 +13,9 @@ As a result, component development becomes way faster, regression testing easier
 First, add marko-playground to your project by running the following command:
 
 ```bash
-yarn add --dev marko-playground
+yarn add --dev @ebay/marko-playground
 #or
-npm i --save-dev marko-playground
+npm i --save-dev @ebay/marko-playground
 ```
 
 Now you can start the playground via
